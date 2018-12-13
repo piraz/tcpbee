@@ -6,7 +6,8 @@ app:
         - 'session'
   #pythonpath: '..'
   #type: 'tornado'
-  port: 8090
+  port: 8000
+  static_url_prefix: /asdfdkljsfdklsjfsdkfjdskfjsdklfjsdlkfjsdlfjdslfjdslfjsd
 
 data:
   sources:
@@ -15,16 +16,18 @@ data:
       # host: localhost
       # port: 6379
       # db: 0
-components:ls
 
+components:
   - id: tcpbee
     class: tcpbee.app.TcpbeeComponent
     enabled: true
   #- id: admin
   #  enabled: true
-  #- id: info
-  #  enabled: true
+  - id: info
+    enabled: true
 
+log:
+  level: DEBUG
 
 # Session types could be:
 # file or redis.
